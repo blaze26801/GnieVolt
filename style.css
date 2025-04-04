@@ -218,7 +218,71 @@ textarea{
 
 
 
+
+
+aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F8C649;
+    color:black;
+    h2{
+        color:black;
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+    }
+    h2:nth-child(1){
+        font-size: 2.5em;
+    }
+    h2:nth-child(1):hover{
+        cursor:pointer;
+        transform: scale(1.1);
+        transition: transform .2s;
+    }
+    #aside-realizacje{
+        #icons{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            i{
+                color:black;
+                font-size: 2em;
+                padding: 10px 10px;
+                transition: transform .2s;
+            }
+            i:hover{
+                cursor:pointer;
+                transform: scale(1.5);
+            }
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            flex-basis: 100%;
+        }
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 960px) {
+    aside{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    #aside-realizacje{
+        display:none;
+    }
+    #aside-tel h2{
+        font-size: 7.5vw;
+        padding: 25px 0;
+    }
     .usluga{
         display: block;
         margin-bottom: 100px;
@@ -272,7 +336,7 @@ textarea{
     }
     header{
         max-height: 2137px;
-        padding: 0;
+        padding: 25px 0;
     }
     h1{
         font-size: 8vw;
@@ -338,8 +402,27 @@ textarea{
     }
 }
 
-@media screen and (min-width: 961px) and (max-width: 1199px){
+@media screen and (min-width: 961px) and (max-width: 1399px){
     /* form styling for small PCs */
+    header{
+        height: 550px;
+    }
+    #header-logo{
+        max-height: 550px;
+        margin: 0;
+        padding: 0;
+    }
+    #header-text{
+        h1{
+            font-size: 3vw;
+            padding: 0 30px;
+        }
+        li{
+            font-size: 2vw;
+            padding: 15px;
+        }
+    }
+
     input{
         min-width:250px;
     }
@@ -356,7 +439,7 @@ textarea{
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
     header li {
         font-size: 42px; /* Set a maximum font size */
     }
