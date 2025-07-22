@@ -3,28 +3,38 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>GnieVolt</title>
+        <title>GnieVolt - Usługi elektryczne</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css?v=2">
+        <link rel="icon" type="image/png" sizes="64x64" href="img/favicon64-2.png">
     </head>
     <body>
         <div id="wrapper">
-            <aside>
+            <aside id="top-bar"">
                 <div id="aside-realizacje">
                     <div id="icons">
                         <a href="https://www.facebook.com/profile.php?id=61574099348864" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61574099348864" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61574099348864" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        
+                        <a href="tel:+48886706525"><h2>886-706-525</h2></a>
                     </div>
-                    <h2>Realizacje</h2>
                 </div>
-                <div id="aside-tel">
-                    <a href="tel:+48886706525"><h2>tel. 886-706-525</h2></a>
-                </div>
+
+                <button id="hamburger-btn" aria-label="Otwórz menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                <nav id="nav-top">
+                    <a href="#header" id="nav-active"><div class="nav-item"><h3>Start</h3></div></a>
+                    <a href="#uslugi"><div class="nav-item"><h3>Usługi</h3></div></a>
+                    <a href="#systemy"><div class="nav-item"><h3>Systemy</h3></div></a>
+                    <a href="#contact"><div class="nav-item"><h3>Kontakt</h3></div></a>
+                    <a href="#"><div class="nav-item"><h3 id="b-l">Realizacje</h3></div></a>
+                </nav>
+                
             </aside>
-            
+            <main>
+            <section id="header">
             <header class="double">
                 <div id="header-logo">
                     <img src="img/logo_alpha.png" alt="logo firmy GnieVolt, przedstawia stylizowane białe góry z żółtą błyskawicą nad nimi oraz nazwę „GnieVolt” w dwóch kolorach, białym i żółtym, na ciemnym tle.">
@@ -32,77 +42,88 @@
                 <nav id="header-text">
                     <h1>Usługi</h1>
                     <ul>
-                        <li id="nav-smarthome">Smart Home</li>
-                        <li id="nav-fotowoltaika">Fotowoltaika i magazyny energii</li>
-                        <li id="nav-instalacje-elektryczne">Instalacje elektryczne</li>
-                        <li id="nav-oswietlenie">Montaż oświetlenia i osprzętu</li>
-                        <li id="nav-alarmy">Systemy alarmowe i monitoring</li>
-                        <li id="nav-pomiary">Pomiary elektryczne</li>
-                        <li id="nav-modernizacja">Instalacje odgromowe</li>
+                        <a href="#smarthome"><li id="nav-smarthome">Smart Home</li></a>
+                        <a href="#fotowoltaika"><li id="nav-fotowoltaika">Fotowoltaika i magazyny energii</li></a>
+                        <a href="#instalacje-elektryczne"><li id="nav-instalacje-elektryczne">Instalacje elektryczne</li></a>
+                        <a href="#oswietlenie"><li id="nav-oswietlenie">Montaż oświetlenia i osprzętu</li></a>
+                        <a href="#alarmy"><li id="nav-alarmy">Systemy alarmowe i monitoring</li></a>
+                        <a href="#pomiary"><li id="nav-pomiary">Pomiary elektryczne</li></a>
+                        <a href="#odgromowe"><li id="nav-odgromowe">Instalacje odgromowe</li></a>
                     </ul>
                 </div>
             </header>
-            <main>
+            </section>
                 <section id="uslugi">
+                    <div id="smarthome" class="usluga">
+                        <img src="img/dawid/smarthome.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Smart Home - komfort i oszczędność</h3>
+                            <p>Nowoczesne systemy Smart Home pozwalają na automatyzację i zdalne sterowanie urządzeniami w domu. Dzięki temu możesz efektywnie zarządzać oświetleniem, ogrzewaniem, roletami czy sprzętem AGD, co przekłada się na realne oszczędności na rachunkach za prąd i ogrzewanie. Oferujemy kompleksowe rozwiązania, które zwiększają wygodę, bezpieczeństwo i energooszczędność Twojego domu.</p>
+                        </div> 
+                    </div>
+                    
+                    <div id="fotowoltaika" class="usluga">
+                        <img src="img/dawid/fotowoltaika.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Fotowoltaika i magazyny energii</h3>
+                            <p>Zainwestuj w odnawialne źródła energii i obniż koszty eksploatacji budynku. Montujemy instalacje fotowoltaiczne dostosowane do Twojego zużycia energii oraz magazyny energii, które pozwalają przechowywać nadwyżki i wykorzystywać je wtedy, gdy są najbardziej potrzebne.</p>
+                        </div>
+                    </div>
 
-                <div id="smarthome" class="usluga">
-                    <img src="img/dawid/smarthome.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Smart Home - komfort i oszczędność</h3>
-                        <p>Nowoczesne systemy Smart Home pozwalają na automatyzację i zdalne sterowanie urządzeniami w domu. Dzięki temu możesz efektywnie zarządzać oświetleniem, ogrzewaniem, roletami czy sprzętem AGD, co przekłada się na realne oszczędności na rachunkach za prąd i ogrzewanie. Oferujemy kompleksowe rozwiązania, które zwiększają wygodę, bezpieczeństwo i energooszczędność Twojego domu.</p>
-                    </div> 
-                </div>
-                
-                <div id="fotowoltaika" class="usluga">
-                    <img src="img/dawid/fotowoltaika.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Fotowoltaika i magazyny energii</h3>
-                        <p>Zainwestuj w odnawialne źródła energii i obniż koszty eksploatacji budynku. Montujemy instalacje fotowoltaiczne dostosowane do Twojego zużycia energii oraz magazyny energii, które pozwalają przechowywać nadwyżki i wykorzystywać je wtedy, gdy są najbardziej potrzebne.</p>
+                    <div id="instalacje-elektryczne" class="usluga">
+                        <img src="img/dawid/elektryczne.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Instalacje elektryczne</h3>
+                            <p>Wykonujemy nowe instalacje elektryczne oraz modernizujemy istniejące systemy w domach, biurach i zakładach przemysłowych. Gwarantujemy bezpieczeństwo, wysoką jakość wykonania i zgodność z obowiązującymi normami.</p>
+                        </div>
                     </div>
-                </div>
+                    
+                    <div id="oswietlenie" class="usluga">
+                        <img src="img/dawid/oswietlenie.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Montaż oświetlenia i osprzętu</h3>
+                            <p>Dobrze dobrane oświetlenie wpływa na komfort i estetykę wnętrza. Montujemy oświetlenie LED, lampy wewnętrzne i zewnętrzne, a także osprzęt elektryczny, taki jak gniazdka, łączniki i rozdzielnice, dbając o każdy detal instalacji.</p>
+                        </div>
+                    </div>
 
-                <div id="instalacje-elektryczne" class="usluga">
-                    <img src="img/dawid/elektryczne.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Instalacje elektryczne</h3>
-                        <p>Wykonujemy nowe instalacje elektryczne oraz modernizujemy istniejące systemy w domach, biurach i zakładach przemysłowych. Gwarantujemy bezpieczeństwo, wysoką jakość wykonania i zgodność z obowiązującymi normami.</p>
+                    <div id="alarmy" class="usluga">
+                        <img src="img/dawid/monitoring.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Systemy alarmowe i monitoring</h3>
+                            <p>Oferujemy profesjonalny montaż systemów alarmowych i monitoringu CCTV, zapewniających stałą ochronę domu lub firmy. Dzięki nowoczesnym rozwiązaniom możesz mieć pełną kontrolę nad swoim obiektem, zarówno lokalnie, jak i zdalnie.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div id="oswietlenie" class="usluga">
-                    <img src="img/dawid/oswietlenie.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Montaż oświetlenia i osprzętu</h3>
-                        <p>Dobrze dobrane oświetlenie wpływa na komfort i estetykę wnętrza. Montujemy oświetlenie LED, lampy wewnętrzne i zewnętrzne, a także osprzęt elektryczny, taki jak gniazdka, łączniki i rozdzielnice, dbając o każdy detal instalacji.</p>
-                    </div>
-                </div>
 
-                <div id="alarmy" class="usluga">
-                    <img src="img/dawid/monitoring.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Systemy alarmowe i monitoring</h3>
-                        <p>Oferujemy profesjonalny montaż systemów alarmowych i monitoringu CCTV, zapewniających stałą ochronę domu lub firmy. Dzięki nowoczesnym rozwiązaniom możesz mieć pełną kontrolę nad swoim obiektem, zarówno lokalnie, jak i zdalnie.</p>
+                    <div id="pomiary" class="usluga">
+                        <img src="img/dawid/pomiary.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Pomiary elektryczne</h3>
+                            <p>Regularne przeglądy i pomiary elektryczne są kluczowe dla bezpieczeństwa. Wykonujemy badania skuteczności ochrony przeciwporażeniowej, rezystancji izolacji i innych parametrów technicznych, zapewniając pełną zgodność z normami.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div id="pomiary" class="usluga">
-                    <img src="img/dawid/pomiary.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Pomiary elektryczne</h3>
-                        <p>Regularne przeglądy i pomiary elektryczne są kluczowe dla bezpieczeństwa. Wykonujemy badania skuteczności ochrony przeciwporażeniowej, rezystancji izolacji i innych parametrów technicznych, zapewniając pełną zgodność z normami.</p>
+                    <div id="odgromowe" class="usluga">
+                        <img src="img/dawid/odgromowe.png" alt="image">
+                        <div class="uslugi-text">
+                            <h3>Instalacje odgromowe</h3>
+                            <p>Zabezpiecz swój dom lub firmę przed skutkami wyładowań atmosferycznych. Oferujemy projektowanie i montaż instalacji odgromowych, które skutecznie odprowadzają energię pioruna do ziemi, chroniąc budynek oraz jego instalacje elektryczne.</p>
+                        </div>
                     </div>
-                </div>
-
-                <div id="odgromowe" class="usluga">
-                    <img src="img/dawid/odgromowe.png" alt="image">
-                    <div class="uslugi-text">
-                        <h3>Instalacje odgromowe</h3>
-                        <p>Zabezpiecz swój dom lub firmę przed skutkami wyładowań atmosferycznych. Oferujemy projektowanie i montaż instalacji odgromowych, które skutecznie odprowadzają energię pioruna do ziemi, chroniąc budynek oraz jego instalacje elektryczne.</p>
-                    </div>
-                </div>
                 </section>
 
-
+                <section id="systemy">
+                    <h2>Systemy</h2>
+                    <p>Tutaj wkrótce pojawi się lista profesjonalnych systemów, jakich używamy.</p>
+                    <div class="flex">
+                        <div class="system">
+                            <a href="https://www.gnievolt.pl" target="_blank"><img src="img/systemy/system.png" alt="Logo systemu."></a>
+                            <a href="https://www.gnievolt.pl" target="_blank"><img src="img/systemy/system.png" alt="Logo systemu."></a>
+                            <a href="https://www.gnievolt.pl" target="_blank"><img src="img/systemy/system.png" alt="Logo systemu."></a>
+                            <a href="https://www.gnievolt.pl" target="_blank"><img src="img/systemy/system.png" alt="Logo systemu."></a>
+                            <a href="https://www.gnievolt.pl" target="_blank"><img src="img/systemy/system.png" alt="Logo systemu."></a>
+                        </div>
+                    </div>
+                </section>
 
 
 
@@ -152,14 +173,15 @@
         </div>
 
 
-
-        <button id="btn-scroll"><i class="fa-solid fa-envelope"></i></button>
-        
+        <a href="#contact">
+        <button id="btn-scroll"><i class="fa-solid fa-envelope"></i></button> 
+        </a>
         
 
         <script src="" async defer></script>
         <script src="https://kit.fontawesome.com/e44205ae58.js" crossorigin="anonymous"></script>   <!--font awesome icons kit-->
         <script src="scripts/scroll.js?v=1.0.1"></script>
+        <script src="scripts/hamburger.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="scripts/sendMail.js"></script>
     </body>

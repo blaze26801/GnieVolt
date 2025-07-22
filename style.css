@@ -1,6 +1,8 @@
 html, body {
     overflow-x: hidden;
     width: 100%;
+    scroll-behavior: smooth;
+
 }
 
 body{
@@ -13,6 +15,71 @@ body{
 main{
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
 }
+
+section{
+  scroll-margin-top: 80px; /* wysokość Twojego navbara */
+}
+
+#top-bar{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#aside-tel{
+    display: flex;
+    align-items: center;
+    background-color: #F8C649;
+    color:black;
+    padding: 20px;
+}
+#aside-realizacje h2{
+    color:black;
+    font-size: 2em;
+    margin: 0px 15px;
+    padding: 0;
+}
+
+#nav-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8C649;
+    color:black;
+    padding: 20px;
+    font-size: 1.25em;
+}
+#nav-top h3{
+    color: black !important;
+    margin: 0 20px;
+}
+.nav-item{
+    padding: 5px 0;
+    transition: transform .2s; /* Animation */
+}
+.nav-item:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#b-l{
+    border-left: 2px solid black;
+    padding-left: 30px;
+}
+.nav-active{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#hamburger-btn{
+    display: none;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 2em;
+    cursor: pointer;
+}
+
 
 .double{
     display:grid;
@@ -39,9 +106,30 @@ h2{
 }
 
 header{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    padding-top: 140px;
     padding-bottom: 50px;
     background-color: #282727;
-    padding: 20px;
+}
+header > *{
+    position: relative;
+    z-index: 1;
+}
+header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/banner-bw.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    z-index: 0;
+    opacity: 0.1;
 }
 header li{
     list-style-type: none;
@@ -66,7 +154,30 @@ header img{
     width: 36vw;
     max-width: 360px;
 }
+#systemy{
+    text-align: center;
+    padding: 20px;
+    background-color: #282727;
+    
+    .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    }
+    
+    img{
+        width: 20vw;
+        max-width: 200px;
+        margin: 20px;
+        transition: transform .1s; /* Animation */
+    }
+    img:hover{
+    transform: scale(1.1);
+}
 
+}
 
 
 
@@ -272,17 +383,68 @@ aside{
 
 @media screen and (max-width: 960px) {
     aside{
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 0;
+        padding: 20px;
     }
     #aside-realizacje{
-        display:none;
+        #icons{
+            .fa-brands{
+                display: none;
+            }
+        }
     }
     #aside-tel h2{
-        font-size: 7.5vw;
+        font-size: 4.5vw;
         padding: 25px 0;
     }
+    #hamburger-btn{
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+        padding: 20px 40px;
+        transition: transform .2s; /* Animation */
+    }
+    #hamburger-btn:hover{
+        transform: scale(1.25) rotate(15deg);
+        font-weight: bold;
+    }
+    #nav-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #F8C649;
+    border-top: 0px dashed black;
+    z-index: 999;
+    overflow: hidden;
+    height: 0;               /* startowa wysokość */
+    margin: 0;
+    padding: 0;
+    transition: height 0.3s ease;
+}
+
+#nav-top.active {
+    height: 250px;           /* wysokość po aktywacji */
+    border-top: 2px dashed black;
+}
+
+#nav-top .nav-item{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#b-l{
+    border-top: 2px solid black;
+    border-left: 0px;
+    padding: 0;
+    padding: 10px 0;
+}
+
     .usluga{
         display: block;
         margin-bottom: 100px;
@@ -295,6 +457,12 @@ aside{
         font-size: 1.2em;
     }
     
+    #systemy{
+        img{
+            width: 30vw;
+        }
+    }
+
     #contact{
         display:block;
         text-align: center;
@@ -337,6 +505,7 @@ aside{
     header{
         max-height: 2137px;
         padding: 25px 0;
+        padding-top: 140px;
     }
     h1{
         font-size: 8vw;

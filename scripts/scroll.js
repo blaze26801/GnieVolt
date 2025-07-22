@@ -1,43 +1,29 @@
-document.querySelector('#btn-scroll').addEventListener('click', function() {
-    document.querySelector('#contact').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('#nav-top a');
 
+window.addEventListener('scroll', () => {
+    let currentSection = '';
 
-// header navigation
-document.querySelector('#nav-smarthome').addEventListener('click', function() {
-    document.querySelector('#smarthome').scrollIntoView({
-        behavior: 'smooth'
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
     });
-});
-document.querySelector('#nav-fotowoltaika').addEventListener('click', function() {
-    document.querySelector('#fotowoltaika').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-document.querySelector('#nav-instalacje-elektryczne').addEventListener('click', function() {
-    document.querySelector('#instalacje-elektryczne').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-document.querySelector('#nav-oswietlenie').addEventListener('click', function() {
-    document.querySelector('#oswietlenie').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-document.querySelector('#nav-alarmy').addEventListener('click', function() {
-    document.querySelector('#alarmy').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-document.querySelector('#nav-pomiary').addEventListener('click', function() {
-    document.querySelector('#pomiary').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-document.querySelector('#nav-modernizacja').addEventListener('click', function() {
-    document.querySelector('#odgromowe').scrollIntoView({
-        behavior: 'smooth'
+
+    if (window.scrollY < 50) {
+        currentSection = 'header';
+    }
+
+    navLinks.forEach(link => {
+        link.classList.remove('nav-active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('nav-active');
+        }
+        if(link.getAttribute('href') === '#header' && currentSection === 'header') {
+            link.classList.add('nav-active');
+        }
     });
 });

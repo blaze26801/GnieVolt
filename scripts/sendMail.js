@@ -1,6 +1,6 @@
 function sendMail(){
     (function(){
-        emailjs.init("zO4oGTMEHHiyR-uZK"); //acoount public key
+        emailjs.init("k4iCk2HvxfHtGrh6V"); //acoount public key
     })();
 
     var params = {
@@ -10,8 +10,8 @@ function sendMail(){
         message: document.querySelector("#message").value,
     };
 
-    var serviceID = "service_2202zsl";
-    var templateID = "template_aewxr9o";
+    var serviceID = "service_7elsdhm";
+    var templateID = "template_sdxp08z";
 
     emailjs.send(serviceID, templateID, params)
     .then(res => {
